@@ -16,7 +16,8 @@ var atlasData = new AtlasData;
 var mapLayers = [];
 
 // Scripting
-var bridgeTalk;
+HUBRIS.BridgeTalk.Setup();
+// var bridgeTalk;
 var consoleDisplay;
 
 if (activeDoc != null)
@@ -25,7 +26,7 @@ if (activeDoc != null)
     atlasGUI = CreateGUI(scriptTitle);
     atlasGUI.show();
 
-    HUBRIS.Documents.BridgeTalkMessage("Init()", "illustrator");
+    HUBRIS.BridgeTalk.Message("Init()", "illustrator");
 }
 
 // INIT

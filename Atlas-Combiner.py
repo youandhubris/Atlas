@@ -11,6 +11,7 @@ scriptVersion = sys.argv[2]
 #scripts paths
 scripts = [	"Libs/json2.js",
 
+			"Hubris/BridgeTalk.js",
 			"Hubris/Header.js",
 			"Hubris/Color.js",
 			"Hubris/Data.js",

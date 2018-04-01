@@ -20,6 +20,7 @@ Client / Non-Verbal Club / Gaia
 #include "Libs/json2.js"
 
 #include "Hubris/Header.js"
+#include "Hubris/BridgeTalk.js"
 #include "Hubris/Color.js"
 #include "Hubris/Data.js"
 #include "Hubris/Documents.js"

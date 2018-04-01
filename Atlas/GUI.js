@@ -26,21 +26,21 @@ function CreateGUI(title)
             
             buttonApplyData.onClick = function()
             {
-                HUBRIS.Documents.BridgeTalkMessage("ApplyData()", "illustrator");
+                HUBRIS.BridgeTalk.Message("ApplyData()", "illustrator");
             };
 
             var buttonSaveAsAi = mapTab.add("button", undefined, "Save As...");
             
             buttonSaveAsAi.onClick = function()
             {
-                HUBRIS.Documents.BridgeTalkMessage("HUBRIS.Export.SaveAsAI()", "illustrator");
+                HUBRIS.BridgeTalk.Message("HUBRIS.Export.SaveAsAI()", "illustrator");
             };
 
             var buttonBatchApplySaveData = mapTab.add("button", undefined, "Batch Apply Data & Save As...");
             
             buttonBatchApplySaveData.onClick = function()
             {
-                HUBRIS.Documents.BridgeTalkMessage("BatchApplySaveData()", "illustrator");
+                HUBRIS.BridgeTalk.Message("BatchApplySaveData()", "illustrator");
             };
 
 
@@ -83,24 +83,24 @@ function CreateGUI(title)
             // Set Data Folder Actions
             buttonSetDataFolder.onClick = function()
             {
-                HUBRIS.Documents.BridgeTalkMessage("SetUserSettingsFolder(\"Please select \'NVC_Atlas-ParsedData\' folder.\")", "illustrator");
-                HUBRIS.Documents.BridgeTalkMessage("Init()", "illustrator");
+                HUBRIS.BridgeTalk.Message("SetUserSettingsFolder(\"Please select \'NVC_Atlas-ParsedData\' folder.\")", "illustrator");
+                HUBRIS.BridgeTalk.Message("Init()", "illustrator");
             };
 
             // Map Actions
             buttonCreateMapLayers.onClick = function()
             {
-                HUBRIS.Documents.BridgeTalkMessage("CreateMapLayers()", "illustrator");
+                HUBRIS.BridgeTalk.Message("CreateMapLayers()", "illustrator");
             };
 
             buttonVerifyMapLayers.onClick = function()
             {
-                HUBRIS.Documents.BridgeTalkMessage("VerifyMapLayers()", "illustrator");
+                HUBRIS.BridgeTalk.Message("VerifyMapLayers()", "illustrator");
             }
 
             buttonUpdateMapList.onClick = function()
             {
-                // HUBRIS.Documents.BridgeTalkMessage("VerifyMapLayers()", "illustrator");
+                // HUBRIS.BridgeTalk.Message("VerifyMapLayers()", "illustrator");
                 mapObject = null;
                 mapObject = ParseData("Map1");
                 UpdateGUIList(mapList, mapObject);
@@ -222,4 +222,9 @@ function ProcessData(selection)
   }
 
   HUBRIS.Logger.ToConsole("\nEND APPLY DATA\n");
+}
+
+function BridgeTalkOnResult()
+{
+    consoleDisplay.text = HUBRIS.Logger;
 }
