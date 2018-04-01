@@ -16,7 +16,7 @@ Client / Non-Verbal Club / Gaia
 
 // DEVELOP START
 // #includepath "include;../Applications/Adobe\ Illustrator\ CC\ 2018/Presets.localized/en_GB/Scripts/"
-#includepath "include;../Users/ogo/Downloads/hubrisxyz-atlas-nvc/"
+#includepath "include;../Users/ogo/Documents/AdobeScripting/Atlas/"
 #include "Libs/json2.js"
 
 #include "Hubris/Header.js"
